@@ -1,0 +1,15 @@
+{
+  "name": "aiup-marketplace",
+  "owner": {
+    "name": "Simon Martinelli",
+    "email": "simon@martinelli.ch",
+    "url": "https://aiup.dev"
+  },
+  "plugins": [
+    {
+      "name": "aiup-vaadin-jooq-plugin",
+      "source": "./aiup-vaadin-jooq-plugin",
+      "description": "AI Unified Process plugin for the Vaadin/jOOQ stack"
+    }
+  ]
+}

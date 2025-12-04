@@ -1,10 +1,10 @@
 {
-  "name": "ai-unified-process-vaadin-jooq",
-  "description": "AI Unified Process workflow for Vaadin/Spring Boot/jOOQ projects",
+  "name": "aiup-vaadin-jooq",
+  "description": "AI Unified Process plugin for the Vaadin/jOOQ stack",
   "version": "1.0.0",
   "author": {
     "name": "Simon Martinelli",
     "email": "simon@martinelli.ch",
-    "url": "https://www.martinelli.ch"
+    "url": "https://aiup.dev"
   }
 }
