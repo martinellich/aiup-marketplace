@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "Vaadin": {
+      "type": "http",
+      "url": "https://mcp.vaadin.com/docs"
+    },
+    "KaribuTesting": {
+      "type": "sse",
+      "url": "https://karibu-testing-mcp.martinelli.ch/sse"
+    },
+    "jOOQ": {
+      "type": "sse",
+      "url": "https://jooq-mcp.martinelli.ch/sse"
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "env": {}
+    }
+  }
+}
