@@ -12,6 +12,8 @@ By default, use sequences for the primary keys.
 
 Template:
 
+# Entity Model
+
 ## Entity Relationship Diagram
 
 ```mermaid
