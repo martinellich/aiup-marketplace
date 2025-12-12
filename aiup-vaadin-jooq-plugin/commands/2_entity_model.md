@@ -6,8 +6,15 @@ After the diagram insert a section per entity.
 Each section contains a Markdown table with the columns.
 Each column has a name and description and defines its data type, including validation rules and column lengths.
 
-| Attribute | Description | Data Type | Length/Precision | Validation Rules |
-|-----------|-------------|-----------|------------------|------------------|
+Example:
+
+### Person
+
+| Attribute  | Description                     | Data Type | Length/Precision | Validation Rules |
+|------------|---------------------------------|-----------|------------------|------------------|
+| id         | Unique identifier of the entity | Long      | 19               | Primary Key      |
+| first_name | First name of the person        | String    | 50               | Not Null         |
+| last_name  | Last name of the person         | String    | 50               | Not Null         |
 
 Also add validation rules that may cover involve multiple columns.
 
