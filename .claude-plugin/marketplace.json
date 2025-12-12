@@ -7,8 +7,8 @@
   },
   "plugins": [
     {
-      "name": "aiup-vaadin-jooq-plugin",
-      "source": "./aiup-vaadin-jooq-plugin",
+      "name": "aiup-vaadin-jooq",
+      "source": "./aiup-vaadin-jooq",
       "description": "AI Unified Process plugin for the Vaadin/jOOQ stack"
     }
   ]

@@ -13,7 +13,7 @@ The repository is structured as a marketplace that can host multiple technology-
 aiup-marketplace/
 ├── .claude-plugin/
 │   └── marketplace.json      # Marketplace metadata listing all plugins
-├── aiup-vaadin-jooq-plugin/  # Vaadin + jOOQ technology stack plugin
+├── aiup-vaadin-jooq/  # Vaadin + jOOQ technology stack plugin
 │   ├── .claude-plugin/
 │   │   └── plugin.json       # Plugin metadata
 │   ├── .mcp.json             # MCP server configurations
