@@ -1,42 +1,23 @@
 Create an entity model (docs/entity_model.md) based on docs/requirements.md as a Markdown file.
-The file must include a Mermaid.js ERD diagram that shows the entity names and the relationships between the entities.
-Don't add columns to the diagram.
 
-After the diagram insert a section per entity.
-Each section contains a Markdown table with the columns.
-Each column has a name and description and defines its data type, including validation rules and column lengths.
+STRUCTURE REQUIREMENTS:
 
-Also add validation rules that may cover involve multiple columns.
+1. Start with a level-1 heading "# Entity Model"
+2. Add a level-2 heading "## Entity Relationship Diagram"
+3. Add a Mermaid erDiagram code block showing entity names and relationships only (no columns)
+4. For each entity, add a level-3 heading with the entity name
+5. Below each heading, add a short description paragraph
+6. Below the description, add a table with columns: Attribute, Description, Data Type, Length/Precision, Validation
+   Rules
 
-By default, use sequences for the primary keys.
+TABLE REQUIREMENTS:
 
-The document must be formatted as follows and contain these sections exactly as in this template:
+- By default, use sequences for primary keys (Long, 19 digits)
+- Include validation rules like Not Null, unique constraints, allowed values
+- Add notes for multi-column validation rules below the table
 
-# Entity Model
-
-## Entity Relationship Diagram
-
-```mermaid
-erDiagram
-    PERSON ||--o{ PHONE: "phones"
-```
-
-### Person
-
-Stores information about a person.
-
-| Attribute  | Description                     | Data Type | Length/Precision | Validation Rules |
+EXAMPLE TABLE FORMAT:
+| Attribute | Description | Data Type | Length/Precision | Validation Rules |
 |------------|---------------------------------|-----------|------------------|------------------|
-| id         | Unique identifier of the entity | Long      | 19               | Primary Key      |
-| first_name | First name of the person        | String    | 50               | Not Null         |
-| last_name  | Last name of the person         | String    | 50               | Not Null         |
-
-### Phone
-
-Contains information about a phone number.
-
-| Attribute | Description                     | Data Type | Length/Precision | Validation Rules                     |
-|-----------|---------------------------------|-----------|------------------|--------------------------------------|
-| id        | Unique identifier of the entity | Long      | 19               | Primary Key                          |
-| number    | Phone number                    | String    | 20               | Not Null                             |
-| type      | Type of phone number            | String    | 20               | Not Null, Values: Home, Work, Mobile |
+| id | Unique identifier of the entity | Long | 19 | Primary Key |
+| first_name | First name of the person | String | 50 | Not Null |
