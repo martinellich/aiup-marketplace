@@ -5,6 +5,10 @@ Don't add columns to the diagram.
 After the diagram insert a section per entity.
 Each section contains a Markdown table with the columns.
 Each column has a name and description and defines its data type, including validation rules and column lengths.
+
+| Attribute | Description | Data Type | Length/Precision | Validation Rules |
+|-----------|-------------|-----------|------------------|------------------|
+
 Also add validation rules that may cover involve multiple columns.
 
 By default, use sequences for the primary keys.
