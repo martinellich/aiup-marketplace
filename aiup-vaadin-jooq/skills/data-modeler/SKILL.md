@@ -1,6 +1,6 @@
 ---
 name: data-modeler
-description: Creates entity models
+description: Creates entity model documents with Mermeaid.js ER diagrams and attribute tables.
 ---
 
 # Data Modeler
