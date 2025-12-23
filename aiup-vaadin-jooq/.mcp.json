@@ -6,11 +6,11 @@
     },
     "KaribuTesting": {
       "type": "http",
-      "url": "https://karibu-testing-mcp.martinelli.ch/sse"
+      "url": "https://karibu-testing-mcp.martinelli.ch/mcp"
     },
     "jOOQ": {
       "type": "http",
-      "url": "https://jooq-mcp.martinelli.ch/sse"
+      "url": "https://jooq-mcp.martinelli.ch/mcp"
     },
     "context7": {
       "type": "http",
