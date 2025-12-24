@@ -91,9 +91,13 @@ The AIUP workflow commands are numbered to indicate their recommended execution 
 
 #### Skills
 
-| Skill            | Description                                              |
-|------------------|----------------------------------------------------------|
-| **data-modeler** | Creates entity models with ER diagrams and attribute tables |
+| Skill                             | Description                                                                  |
+|-----------------------------------|------------------------------------------------------------------------------|
+| **requirements-engineer**         | Creates requirements catalogs                                                |
+| **data-modeler**                  | Creates entity models with Mermaid.js ER diagrams and attribute tables       |
+| **use-case-specification-writer** | Creates use case specifications with structured scenarios and business rules |
+| **karibu-tester**                 | Creates Karibu unit tests for Vaadin views                                   |
+| **playwright-tester**             | Creates Playwright integration tests for Vaadin views                        |
 
 #### MCP Servers
 
@@ -102,6 +106,7 @@ The AIUP workflow commands are numbered to indicate their recommended execution 
 | **Vaadin**        | Access to Vaadin documentation         |
 | **KaribuTesting** | Karibu testing framework documentation |
 | **jOOQ**          | jOOQ documentation                     |
+| **context7**      | General library documentation lookup   |
 | **Playwright**    | Browser automation for testing         |
 
 ## Learn More
