@@ -8,6 +8,14 @@ The AI Unified Process (AIUP) is a methodology that keeps requirements at the ce
 provides a structured workflow from vision to implementation, ensuring consistency and traceability throughout your
 project.
 
+## Installation
+
+```
+/plugin marketplace add martinellich/aiup-marketplace
+/plugin enable martinellich/aiup-marketplace
+/plugin enable aiup-vaadin-jooq
+```
+
 ## Key Concepts
 
 ### Marketplace
@@ -60,14 +68,6 @@ An **MCP (Model Context Protocol) Server** is an external service that provides 
 documentation, and capabilities. MCP servers extend what Claude can do by connecting it to external resources like
 documentation databases, APIs, browser automation, and other integrations. They start automatically when the plugin is
 enabled.
-
-## Installation
-
-```
-/plugin marketplace add martinellich/aiup-marketplace
-/plugin enable martinellich/aiup-marketplace
-/plugin enable aiup-vaadin-jooq
-```
 
 ## Available Plugins
 
