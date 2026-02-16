@@ -8,11 +8,25 @@ The AI Unified Process (AIUP) is a methodology that keeps requirements at the ce
 provides a structured workflow from vision to implementation, ensuring consistency and traceability throughout your
 project.
 
+## Architecture
+
+The marketplace is organized in two layers:
+
+- **aiup-core** — Stack-agnostic methodology (requirements, entity model, use cases). Works with any tech stack.
+- **aiup-vaadin-jooq** — Stack-specific implementation and testing for the Vaadin + jOOQ technology stack.
+
+Commands follow the [AIUP phases](https://aiup.dev) (based on the Rational Unified Process):
+
+|                      | Inception       | Elaboration                            | Construction                                                                | Transition |
+|----------------------|-----------------|----------------------------------------|-----------------------------------------------------------------------------|------------|
+| **aiup-core**        | `/requirements` | `/entity_model`<br>`/use_case_diagram` | `/use_case_spec`                                                            |            |
+| **aiup-vaadin-jooq** |                 |                                        | `/flyway_migration`<br>`/implement`<br>`/karibu_test`<br>`/playwright_test` |            |
+
 ## Installation
 
 ```
 /plugin marketplace add martinellich/aiup-marketplace
-/plugin enable martinellich/aiup-marketplace
+/plugin enable aiup-core
 /plugin enable aiup-vaadin-jooq
 ```
 
@@ -71,24 +85,18 @@ enabled.
 
 ## Available Plugins
 
-### aiup-vaadin-jooq
+### aiup-core
 
-A plugin for Java web application development using the Vaadin + jOOQ technology stack.
+Stack-agnostic core methodology plugin. Use this for any project, regardless of technology stack.
 
 #### Commands
 
-The AIUP workflow commands are numbered to indicate their recommended execution order:
-
-| Command                 | Description                                  |
-|-------------------------|----------------------------------------------|
-| `/1_requirements`       | Generate requirements from vision document   |
-| `/2_entity_model`       | Create entity model with Mermaid ER diagrams |
-| `/3_use_case_diagram`   | Generate PlantUML use case diagrams          |
-| `/4_database_migration` | Create Flyway database migrations            |
-| `/5_use_case_spec`      | Write detailed use case specifications       |
-| `/6_implement`          | Implement use cases using Vaadin and jOOQ    |
-| `/7_karibu_test`        | Create Karibu unit tests                     |
-| `/8_playwright_test`    | Create Playwright integration tests          |
+| Command             | Description                                  |
+|---------------------|----------------------------------------------|
+| `/requirements`     | Generate requirements from vision document   |
+| `/entity_model`     | Create entity model with Mermaid ER diagrams |
+| `/use_case_diagram` | Generate PlantUML use case diagrams          |
+| `/use_case_spec`    | Write detailed use case specifications       |
 
 #### Skills
 
@@ -97,8 +105,34 @@ The AIUP workflow commands are numbered to indicate their recommended execution 
 | **requirements-engineer**         | Creates requirements catalogs                                                |
 | **data-modeler**                  | Creates entity models with Mermaid.js ER diagrams and attribute tables       |
 | **use-case-specification-writer** | Creates use case specifications with structured scenarios and business rules |
-| **karibu-tester**                 | Creates Karibu unit tests for Vaadin views                                   |
-| **playwright-tester**             | Creates Playwright integration tests for Vaadin views                        |
+
+#### MCP Servers
+
+| Server         | Description                          |
+|----------------|--------------------------------------|
+| **context7**   | General library documentation lookup |
+| **Playwright** | Browser automation for testing       |
+
+### aiup-vaadin-jooq
+
+Stack-specific plugin for Java web application development using the Vaadin + jOOQ technology stack.
+Requires **aiup-core** for the methodology commands.
+
+#### Commands
+
+| Command             | Description                               |
+|---------------------|-------------------------------------------|
+| `/flyway_migration` | Create Flyway database migrations         |
+| `/implement`        | Implement use cases using Vaadin and jOOQ |
+| `/karibu_test`      | Create Karibu unit tests                  |
+| `/playwright_test`  | Create Playwright integration tests       |
+
+#### Skills
+
+| Skill                 | Description                                           |
+|-----------------------|-------------------------------------------------------|
+| **karibu-tester**     | Creates Karibu unit tests for Vaadin views            |
+| **playwright-tester** | Creates Playwright integration tests for Vaadin views |
 
 #### MCP Servers
 
@@ -107,8 +141,7 @@ The AIUP workflow commands are numbered to indicate their recommended execution 
 | **Vaadin**        | Access to Vaadin documentation         |
 | **KaribuTesting** | Karibu testing framework documentation |
 | **jOOQ**          | jOOQ documentation                     |
-| **context7**      | General library documentation lookup   |
-| **Playwright**    | Browser automation for testing         |
+| **JavaDocs**      | Java API documentation                 |
 
 ## Learn More
 
