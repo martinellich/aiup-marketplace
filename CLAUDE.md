@@ -5,23 +5,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Overview
 
 AIUP Marketplace is a collection of plugins for Claude Code that implement the AI Unified Process (AIUP) methodology.
-The repository is structured as a marketplace that can host multiple technology-specific plugins.
+The repository is structured as a marketplace with a two-layer architecture: a stack-agnostic core and technology-specific plugins.
 
 ## Repository Structure
 
 ```
 aiup-marketplace/
 ├── .claude-plugin/
-│   └── marketplace.json      # Marketplace metadata listing all plugins
-├── aiup-vaadin-jooq/  # Vaadin + jOOQ technology stack plugin
+│   └── marketplace.json          # Marketplace metadata listing all plugins
+├── aiup-core/                    # Stack-agnostic core methodology
 │   ├── .claude-plugin/
-│   │   └── plugin.json       # Plugin metadata
-│   ├── .mcp.json             # MCP server configurations
-│   └── commands/             # Slash commands implementing AIUP workflow
+│   │   └── plugin.json
+│   ├── .mcp.json                 # context7, Playwright
+│   └── skills/                   # All workflow steps as skills (slash commands)
+│       ├── requirements/
+│       ├── entity-model/
+│       ├── use-case-diagram/
+│       └── use-case-spec/
+├── aiup-vaadin-jooq/             # Vaadin + jOOQ technology stack plugin
+│   ├── .claude-plugin/
+│   │   └── plugin.json
+│   ├── .mcp.json                 # Vaadin, KaribuTesting, jOOQ, JavaDocs
+│   └── skills/                   # All workflow steps as skills (slash commands)
+│       ├── flyway-migration/
+│       ├── implement/
+│       ├── karibu-test/
+│       └── playwright-test/
 └── README.md
 ```
 
 ## Plugin Architecture
+
+### Two-Layer Design
+
+- **aiup-core** — Stack-agnostic methodology: from vision to use case specification. Works with any tech stack.
+- **aiup-vaadin-jooq** — Stack-specific: implementation and testing for the Vaadin + jOOQ stack. Requires aiup-core.
 
 ### Marketplace Configuration
 
@@ -34,27 +52,26 @@ Each plugin contains:
 
 - `.claude-plugin/plugin.json` - Plugin metadata (name, version, author)
 - `.mcp.json` - MCP server configurations for external tools
-- `commands/` - Numbered slash command files that define the AIUP workflow steps
+- `skills/` - Skills with SKILL.md definitions; each skill is also a slash command
 
-## AIUP Workflow (Vaadin/jOOQ Plugin)
+## AIUP Workflow
 
-The workflow commands are numbered to indicate execution order:
+Skills follow the AIUP phases: Inception, Elaboration, Construction, Transition.
 
-1. **1_requirements.md** - Generate requirements from vision document
-2. **2_entity_model.md** - Create entity model with Mermaid ER diagrams
-3. **3_use_case_diagram.md** - Generate PlantUML use case diagrams
-4. **4_database_migration.md** - Create Flyway migrations
-5. **5_use_case_spec.md** - Write detailed use case specifications
-6. **6_implement.md** - Implement use cases using Vaadin and jOOQ
-7. **7_karibu_test.md** - Create Karibu unit tests
-8. **8_playwright_test.md** - Create Playwright integration tests
+### Core (stack-agnostic)
 
-## MCP Servers (Vaadin/jOOQ Plugin)
+| Phase        | Skill (slash command) | Description                            |
+|--------------|-----------------------|----------------------------------------|
+| Inception    | `/requirements`       | Generate requirements from vision      |
+| Elaboration  | `/entity-model`       | Create entity model with Mermaid ER    |
+| Elaboration  | `/use-case-diagram`   | Generate PlantUML use case diagrams    |
+| Construction | `/use-case-spec`      | Write detailed use case specifications |
 
-The plugin configures these MCP servers:
+### Vaadin/jOOQ (stack-specific)
 
-- **Vaadin** - Vaadin documentation (HTTP)
-- **KaribuTesting** - Karibu testing framework docs (SSE)
-- **jOOQ** - jOOQ documentation (SSE)
-- **context7** - General documentation lookup (HTTP)
-- **playwright** - Browser automation (stdio via npx)
+| Phase        | Skill (slash command) | Description                               |
+|--------------|-----------------------|-------------------------------------------|
+| Construction | `/flyway-migration`   | Create Flyway migrations                  |
+| Construction | `/implement`          | Implement use cases using Vaadin and jOOQ |
+| Construction | `/karibu-test`        | Create Karibu unit tests                  |
+| Construction | `/playwright-test`    | Create Playwright integration tests       |

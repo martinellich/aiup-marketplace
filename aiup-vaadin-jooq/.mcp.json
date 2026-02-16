@@ -12,21 +12,9 @@
       "type": "http",
       "url": "https://jooq-mcp.martinelli.ch/mcp"
     },
-    "context7": {
-      "type": "http",
-      "url": "https://mcp.context7.com/mcp"
-    },
     "JavaDocs": {
       "type": "http",
       "url": "https://www.javadocs.dev/mcp"
-    },
-    "playwright": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "@playwright/mcp@latest"
-      ],
-      "env": {}
     }
   }
 }
