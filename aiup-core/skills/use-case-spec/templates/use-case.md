@@ -2,11 +2,11 @@
 
 ## Overview
 
-**Use Case ID:** UC-XXX
-**Use Case Name:** [Descriptive Name]
-**Primary Actor:** [Role]
-**Goal:** [What the actor wants to achieve]
-**Status:** Draft | Review | Approved
+**Use Case ID:** UC-XXX   
+**Use Case Name:** [Descriptive Name]   
+**Primary Actor:** [Role]   
+**Goal:** [What the actor wants to achieve]   
+**Status:** Draft | Review | Approved | Implemented | Tested | Done | Obsolete
 
 ## Preconditions
 
@@ -43,3 +43,29 @@
 ### BR-XXX: [Rule Name]
 
 [Description of the business rule that applies to this use case]
+
+---
+
+## Reference
+
+### Status Values
+
+| Status      | Description                                      |
+|-------------|--------------------------------------------------|
+| Draft       | Initial version, still being written.            |
+| Review      | Complete, awaiting stakeholder review.           |
+| Approved    | Reviewed and approved for implementation.        |
+| Implemented | Implementation complete, pending testing.        |
+| Tested      | All tests pass, pending final acceptance.        |
+| Done        | Fully implemented, tested, and accepted.         |
+| Obsolete    | No longer valid, superseded by another use case. |
+
+### Step Writing Guidelines
+
+| Do                                  | Don't                                         |
+|-------------------------------------|-----------------------------------------------|
+| "User clicks Save button"           | "User triggers onClick handler"               |
+| "System validates the email format" | "System runs regex /^[\w]+@[\w]+$/"           |
+| "System displays error message"     | "System throws ValidationException"           |
+| "User enters check-in date"         | "User populates dateField component"          |
+| "System stores the reservation"     | "System executes INSERT INTO reservations..." |

@@ -1,6 +1,11 @@
 ---
 name: karibu-test
-description: Creates Karibu unit tests for Vaadin views. Use when writing server-side unit tests or view tests for Vaadin components.
+description: >
+  Creates Karibu server-side unit tests for Vaadin views covering navigation,
+  component interactions, form validation, grid operations, and notifications.
+  Use when the user asks to "write Karibu tests", "unit test a Vaadin view",
+  "test the UI server-side", "create view tests", or mentions Karibu testing,
+  Vaadin unit tests, or server-side UI testing.
 ---
 
 # Karibu Test
@@ -141,8 +146,12 @@ Use AssertJ or Karibu Testing assertions:
     - Perform interactions
     - Assert expected outcomes
     - Clean up test data if created during test
-5. Run tests to verify
-6. Mark todos complete
+5. Run tests to verify they pass
+6. If a test fails:
+    - Check component locators with `_dump()` to inspect the component tree
+    - Verify test data exists in the Flyway test migrations
+    - Ensure navigation to the correct view before finding components
+7. Mark todos complete
 
 ## Resources
 

@@ -1,6 +1,11 @@
 ---
 name: implement
-description: Implements use cases using Vaadin for the UI and jOOQ for data access.
+description: >
+  Implements use cases by creating Vaadin views, forms, and grids for the UI
+  layer and jOOQ queries for the data access layer. Use when the user asks to
+  "implement a use case", "build the UI", "create a Vaadin view", "write the
+  data access layer", or mentions Vaadin implementation, jOOQ queries,
+  Java web app, or database-backed UI.
 ---
 
 # Implement Use Case
@@ -22,9 +27,10 @@ Check the Vaadin and jOOQ MCP servers for guidance.
 2. Read the entity model from `docs/entity_model.md`
 3. Check existing code for patterns and conventions
 4. Implement the data access layer using jOOQ
-5. Implement the Vaadin view following existing patterns
-6. Wire up the view with the data access layer
-7. Verify the implementation compiles
+5. Verify the data access layer compiles and follows existing patterns
+6. Implement the Vaadin view following existing patterns
+7. Wire up the view with the data access layer
+8. Verify the full implementation compiles successfully
 
 ## Resources
 

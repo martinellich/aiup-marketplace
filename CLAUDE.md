@@ -5,7 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Overview
 
 AIUP Marketplace is a collection of plugins for Claude Code that implement the AI Unified Process (AIUP) methodology.
-The repository is structured as a marketplace with a two-layer architecture: a stack-agnostic core and technology-specific plugins.
+The repository is structured as a marketplace with a two-layer architecture: a stack-agnostic core and
+technology-specific plugins.
 
 ## Repository Structure
 

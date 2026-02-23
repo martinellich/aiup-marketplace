@@ -1,6 +1,11 @@
 ---
 name: use-case-spec
-description: Creates use case specifications with structured scenarios and business rules. Use when documenting functional requirements, user flows, or system behavior.
+description: >
+  Creates detailed use case specification documents with actors, preconditions,
+  main success scenarios, alternative flows, postconditions, and business rules.
+  Use when the user asks to "write a use case", "specify a use case", "document
+  system behavior", "define scenarios", "write a functional spec", or mentions
+  use case specification, acceptance criteria, or user scenarios.
 ---
 
 # Use Case Specification
@@ -108,25 +113,6 @@ Reservations cannot be made more than 365 days in advance.
 ### BR-003: Deposit Requirement
 
 Reservations of 3 or more nights require a 50% deposit.
-
-## Status Reference
-
-| Status   | Description                                      |
-|----------|--------------------------------------------------|
-| Draft    | Initial version, still being written.            |
-| Review   | Complete, awaiting stakeholder review.           |
-| Approved | Reviewed and approved for implementation.        |
-| Obsolete | No longer valid, superseded by another use case. |
-
-## Step Writing Guidelines
-
-| Do                                  | Don't                                         |
-|-------------------------------------|-----------------------------------------------|
-| "User clicks Save button"           | "User triggers onClick handler"               |
-| "System validates the email format" | "System runs regex /^[\w]+@[\w]+$/"           |
-| "System displays error message"     | "System throws ValidationException"           |
-| "User enters check-in date"         | "User populates dateField component"          |
-| "System stores the reservation"     | "System executes INSERT INTO reservations..." |
 
 ## Workflow
 

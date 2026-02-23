@@ -15,7 +15,8 @@ description: >
 ## Instructions
 
 Create or update the requirements catalog at `docs/requirements.md` based on `docs/vision.md`.
-The document contains functional requirements, non-functional requirements, and constraints organized as Markdown tables.
+The document contains functional requirements, non-functional requirements, and constraints organized as Markdown
+tables.
 
 ## DO NOT
 
@@ -61,54 +62,10 @@ Define limitations and boundaries imposed on the solution.
 | C-004 | Budget Limit      | Total development cost must not exceed $50,000.                  | Business  | High     | Open   |
 | C-005 | Deadline          | System must be production-ready by Q2 2025.                      | Schedule  | High     | Open   |
 
-## ID Prefixes Reference
+## Reference
 
-| Prefix | Type                       | Example |
-|--------|----------------------------|---------|
-| FR     | Functional Requirement     | FR-001  |
-| NFR    | Non-Functional Requirement | NFR-001 |
-| C      | Constraint                 | C-001   |
-
-## Priority Reference
-
-| Priority | Description                                         |
-|----------|-----------------------------------------------------|
-| High     | Must have. Core functionality or critical quality.  |
-| Medium   | Should have. Important but system works without it. |
-| Low      | Nice to have. Can be deferred to future releases.   |
-
-## Status Reference
-
-| Status      | Description                                    |
-|-------------|------------------------------------------------|
-| Open        | Requirement defined but not yet implemented.   |
-| In Progress | Currently being implemented.                   |
-| Implemented | Implementation complete, pending verification. |
-| Verified    | Tested and confirmed working.                  |
-| Deferred    | Postponed to a future release.                 |
-| Rejected    | Removed from scope.                            |
-
-## NFR Categories Reference
-
-| Category        | Description                                   |
-|-----------------|-----------------------------------------------|
-| Performance     | Speed, throughput, response time              |
-| Scalability     | Ability to handle growth                      |
-| Availability    | Uptime, fault tolerance                       |
-| Security        | Authentication, authorization, encryption     |
-| Usability       | User experience, accessibility                |
-| Maintainability | Code quality, documentation, modularity       |
-| Portability     | Platform independence, deployment flexibility |
-
-## Constraint Categories Reference
-
-| Category    | Description                                   |
-|-------------|-----------------------------------------------|
-| Technical   | Technology stack, platforms, integrations     |
-| Business    | Budget, resources, organizational policies    |
-| Schedule    | Deadlines, milestones, time constraints       |
-| Regulatory  | Legal, compliance, industry standards         |
-| Operational | Deployment, maintenance, support requirements |
+See [REFERENCE.md](REFERENCE.md) for ID prefixes, priority levels, status values, NFR categories, and constraint
+categories.
 
 ## Requirement Quality Checks
 
@@ -124,9 +81,11 @@ Every requirement must pass these checks before finalizing:
 
 ## Error Recovery
 
-- **Incomplete source document**: List what is missing (roles, NFR categories, constraints) and ask the user to clarify before proceeding
+- **Incomplete source document**: List what is missing (roles, NFR categories, constraints) and ask the user to clarify
+  before proceeding
 - **Ambiguous requirement from user**: Rewrite it as a measurable requirement and ask the user to confirm the threshold
-- **Conflicting requirements**: Flag the conflict explicitly (e.g., "FR-003 requires real-time sync but C-002 limits to batch processing") and ask the user to resolve
+- **Conflicting requirements**: Flag the conflict explicitly (e.g., "FR-003 requires real-time sync but C-002 limits to
+  batch processing") and ask the user to resolve
 - **Missing stakeholder roles**: Default to generic roles (User, Admin, System) and note them for user review
 
 ## Workflow

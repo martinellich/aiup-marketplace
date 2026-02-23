@@ -1,6 +1,11 @@
 ---
 name: playwright-test
-description: Creates Playwright integration tests for Vaadin views. Use when writing e2e tests, browser tests, or UI tests for Vaadin.
+description: >
+  Creates Playwright browser-based integration tests for Vaadin views covering
+  navigation, form interactions, grid operations, and dialog handling. Use when
+  the user asks to "write Playwright tests", "create e2e tests", "write
+  integration tests", "test in the browser", or mentions end-to-end testing,
+  browser tests, UI integration tests, or Playwright for Vaadin.
 ---
 
 # Playwright Test
@@ -167,5 +172,10 @@ Playwright tests run in a real browser with viewport constraints:
     - Perform interactions (always wait after)
     - Assert expected outcomes
     - Clean up test data if created during test
-5. Run tests to verify
-6. Mark todos complete
+5. Run tests to verify they pass
+6. If a test fails:
+    - Verify the view loaded correctly (check page URL and title)
+    - Ensure `mopo.waitForConnectionToSettle()` is called after every interaction
+    - Check that test data exists in the Flyway test migrations
+    - For grid assertions, use `isGreaterThan()` instead of exact counts
+7. Mark todos complete

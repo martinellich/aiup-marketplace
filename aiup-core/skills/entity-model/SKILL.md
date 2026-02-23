@@ -1,6 +1,11 @@
 ---
 name: entity-model
-description: Creates entity model documents with Mermaid.js ER diagrams and attribute tables. Use when designing database schemas, ERDs, or data models.
+description: >
+  Creates entity model documents with Mermaid.js ER diagrams and attribute
+  tables defining entities, relationships, data types, and validation rules.
+  Use when the user asks to "create an entity model", "design a data model",
+  "draw an ERD", "define database schema", "model entities", or mentions
+  entity-relationship diagram, ER diagram, database design, or data modeling.
 ---
 
 # Entity Model
@@ -111,4 +116,9 @@ If validation spans multiple columns, add after the table:
     - Write attribute table with 5 columns
     - Add constraints if needed
     - Mark todo complete
-5. Verify every entity has an attribute table
+5. Validate the document:
+    - Every entity in the ER diagram has a corresponding attribute table section
+    - Every attribute table has exactly 5 columns
+    - No attributes appear inside the Mermaid diagram entity blocks
+    - All foreign keys reference existing entities
+    - All validation rules use values from the Validation Rules Reference
