@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-AIUP Marketplace is a collection of plugins for Claude Code that implement the AI Unified Process (AIUP) methodology.
+AI Unified Process Marketplace is a collection of plugins for Claude Code that implement the AI Unified Process methodology.
 The repository is structured as a marketplace with a two-layer architecture: a stack-agnostic core and
 technology-specific plugins.
 
@@ -55,9 +55,9 @@ Each plugin contains:
 - `.mcp.json` - MCP server configurations for external tools
 - `skills/` - Skills with SKILL.md definitions; each skill is also a slash command
 
-## AIUP Workflow
+## AI Unified Process Workflow
 
-Skills follow the AIUP phases: Inception, Elaboration, Construction, Transition.
+Skills follow the AI Unified Process phases: Inception, Elaboration, Construction, Transition.
 
 ### Core (stack-agnostic)
 

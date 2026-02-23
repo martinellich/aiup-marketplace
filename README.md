@@ -1,10 +1,10 @@
-# AIUP Marketplace
+# AI Unified Process Marketplace
 
 A collection of plugins that bring the [AI Unified Process](https://aiup.dev) methodology directly into Claude Code.
 
-## What is AIUP?
+## What is the AI Unified Process?
 
-The AI Unified Process (AIUP) is a methodology that keeps requirements at the center of your development process. It
+The AI Unified Process is a methodology that keeps requirements at the center of your development process. It
 provides a structured workflow from vision to implementation, ensuring consistency and traceability throughout your
 project.
 
@@ -15,7 +15,7 @@ The marketplace is organized in two layers:
 - **aiup-core** — Stack-agnostic methodology (requirements, entity model, use cases). Works with any tech stack.
 - **aiup-vaadin-jooq** — Stack-specific implementation and testing for the Vaadin + jOOQ technology stack.
 
-Skills follow the [AIUP phases](https://aiup.dev) (based on the Rational Unified Process):
+Skills follow the [AI Unified Process phases](https://aiup.dev) (based on the Rational Unified Process):
 
 |                      | Inception       | Elaboration                            | Construction                                                                | Transition |
 |----------------------|-----------------|----------------------------------------|-----------------------------------------------------------------------------|------------|
