@@ -1,5 +1,13 @@
 # AI Unified Process Marketplace
 
+> **WARNING: THIS REPOSITORY IS MARKED FOR DELETION.**
+>
+> This repository has moved to its new home at *
+*[AI-Unified-Process/marketplace](https://github.com/AI-Unified-Process/marketplace)**. Please use the new repository
+> for all future work. This repository will be removed.
+
+---
+
 A collection of plugins that bring the [AI Unified Process](https://aiup.dev) methodology directly into Claude Code.
 
 ## What is the AI Unified Process?
