@@ -6,7 +6,7 @@
 **Use Case Name:** [Descriptive Name]   
 **Primary Actor:** [Role]   
 **Goal:** [What the actor wants to achieve]   
-**Status:** Draft | Review | Approved | Implemented | Tested | Done | Obsolete
+**Status:** Draft | Reviewed | Approved | Implemented | Tested | Done | Obsolete
 
 ## Preconditions
 
