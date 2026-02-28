@@ -2,8 +2,7 @@
 
 > **WARNING: THIS REPOSITORY IS MARKED FOR DELETION.**
 >
-> This repository has moved to its new home at *
-*[AI-Unified-Process/marketplace](https://github.com/AI-Unified-Process/marketplace)**. Please use the new repository
+> This repository has moved to its new home at **[AI-Unified-Process/marketplace](https://github.com/AI-Unified-Process/marketplace)**. Please use the new repository
 > for all future work. This repository will be removed.
 
 ---
